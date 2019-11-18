@@ -249,20 +249,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="fsw-B8-LSj">
-                                <rect key="frame" x="32" y="32" width="350" height="471"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fsw-B8-LSj">
+                                <rect key="frame" x="32" y="32" width="350" height="776"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate minimum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-bd-WqY">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="7XU-PO-8Kf"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="97"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XAY-GX-wjY">
-                                        <rect key="frame" x="-2" y="63" width="354" height="31"/>
+                                        <rect key="frame" x="-2" y="97" width="354" height="98"/>
                                         <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -270,16 +267,13 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate maximum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r23-2L-CQg">
-                                        <rect key="frame" x="0.0" y="126" width="350" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ilc-N8-kVC"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="194" width="350" height="97"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-u6-W30">
-                                        <rect key="frame" x="-2" y="189" width="354" height="31"/>
+                                        <rect key="frame" x="-2" y="291" width="354" height="98"/>
                                         <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -287,16 +281,13 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch minimum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR6-2b-2Z0">
-                                        <rect key="frame" x="0.0" y="252" width="350" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="aJ5-nR-3dA"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="388" width="350" height="97"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-1000" minValue="-1000" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="PLW-Ia-vSU">
-                                        <rect key="frame" x="-2" y="315" width="354" height="31"/>
+                                        <rect key="frame" x="-2" y="485" width="354" height="98"/>
                                         <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -304,16 +295,13 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch maximum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opS-y0-mlR">
-                                        <rect key="frame" x="0.0" y="378" width="350" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="fwn-Er-E5U"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="582" width="350" height="97"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="500" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="69d-7p-uKB">
-                                        <rect key="frame" x="-2" y="441" width="354" height="31"/>
+                                        <rect key="frame" x="-2" y="679" width="354" height="98"/>
                                         <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -325,6 +313,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.27052119009999998" green="0.49777514029999997" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g41-29-xZY" firstAttribute="bottom" secondItem="fsw-B8-LSj" secondAttribute="bottom" id="3ZP-aR-rnk"/>
                             <constraint firstItem="fsw-B8-LSj" firstAttribute="leading" secondItem="g41-29-xZY" secondAttribute="leading" constant="32" id="HDw-bo-9e8"/>
                             <constraint firstItem="fsw-B8-LSj" firstAttribute="top" secondItem="g41-29-xZY" secondAttribute="top" constant="32" id="OO1-es-KG7"/>
                             <constraint firstItem="g41-29-xZY" firstAttribute="trailing" secondItem="fsw-B8-LSj" secondAttribute="trailing" constant="32" id="XDv-5f-lJl"/>
