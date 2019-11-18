@@ -75,6 +75,7 @@ class PlaySoundsViewController: UIViewController {
         stopAudio()
     }
     
+    // I can't apply the effects and save them to the file so I can share the processed audio with the effects, I would like some help with this, what do I need to do to apply the effects to the saved file?
     @IBAction func share(_ sender: Any) {
         let urlAudio = URL(fileURLWithPath: recordedAudioURL.path, isDirectory: false)
         let activityController = UIActivityViewController(activityItems: [urlAudio], applicationActivities: nil)
