@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E441A3242381DAE300548D7A /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E441A3232381DAE300548D7A /* PlaySoundsViewController+Audio.swift */; };
+		E441A3262382124B00548D7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E441A3252382124B00548D7A /* SettingsViewController.swift */; };
 		E4704C292381ABC1003934D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4704C282381ABC1003934D9 /* AppDelegate.swift */; };
 		E4704C2B2381ABC1003934D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4704C2A2381ABC1003934D9 /* SceneDelegate.swift */; };
 		E4704C302381ABC1003934D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4704C2E2381ABC1003934D9 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		E441A3232381DAE300548D7A /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
+		E441A3252382124B00548D7A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E4704C252381ABC1003934D9 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4704C282381ABC1003934D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4704C2A2381ABC1003934D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				E441A3222381DAC800548D7A /* Extension */,
 				E4704C4D2381B06B003934D9 /* MainViewController.swift */,
 				E4704C4F2381BA53003934D9 /* PlaySoundsViewController.swift */,
+				E441A3252382124B00548D7A /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				E4704C2B2381ABC1003934D9 /* SceneDelegate.swift in Sources */,
 				E4704C502381BA53003934D9 /* PlaySoundsViewController.swift in Sources */,
 				E4704C4E2381B06B003934D9 /* MainViewController.swift in Sources */,
+				E441A3262382124B00548D7A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,13 @@
 import UIKit
 import AVFoundation
 
+struct SettingsFields {
+    static var rateMin : Float = 0.5
+    static var rateMax : Float = 1.5
+    static var pitchMin: Float = -1000
+    static var pitchMax: Float = 1000
+}
+
 class PlaySoundsViewController: UIViewController {
 
     // MARK: - PROPERTIES
@@ -48,13 +55,13 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch ButtonType(rawValue: sender.tag)! {
         case .slow:
-            playSound(rate: 0.5)
+            playSound(rate: SettingsFields.rateMin)
         case .fast:
-            playSound(rate: 1.5)
+            playSound(rate: SettingsFields.rateMax)
         case .chipmunk:
-            playSound(pitch: 1000)
+            playSound(pitch: SettingsFields.pitchMax)
         case .vader:
-            playSound(pitch: -1000)
+            playSound(pitch: SettingsFields.pitchMin)
         case .echo:
             playSound(echo: true)
         case .reverb:
@@ -67,4 +74,11 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
     }
+    
+    @IBAction func share(_ sender: Any) {
+        let urlAudio = URL(fileURLWithPath: recordedAudioURL.path, isDirectory: false)
+        let activityController = UIActivityViewController(activityItems: [urlAudio], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
+    
 }

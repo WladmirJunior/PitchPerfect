@@ -11,9 +11,9 @@ import AVFoundation
 
 struct Constants {
     public static let segueIdentifier = "stopRecordingSegue"
-    public static let fileName = "recordedVoice.wav"
-    public static let startRecordText = "Toque para começar a gravar"
-    public static let stopRecordText = "Toque para terminar a gravação"
+    public static let fileName = "record.wav"
+    public static let startRecordText = "Tap to start recording"
+    public static let stopRecordText = "Tap to finish recording"
 }
 
 class MainViewController: UIViewController {

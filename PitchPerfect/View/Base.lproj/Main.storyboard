@@ -187,7 +187,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oox-3D-Kqa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Effects" id="VzV-Pn-gyP"/>
+                    <navigationItem key="navigationItem" title="Effects" id="VzV-Pn-gyP">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="slider.horizontal.3" catalog="system" id="Rul-ws-Wjy">
+                                <connections>
+                                    <segue destination="hvF-bI-Dex" kind="presentation" id="VS6-Fd-jG4"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="mIs-KQ-JFC">
+                                <connections>
+                                    <action selector="share:" destination="t2y-YR-WVb" id="Egm-Q3-GcB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="chipmunkButton" destination="cnX-NZ-j6L" id="3RH-l7-8nD"/>
                         <outlet property="echoButton" destination="sY9-TJ-8Le" id="fb7-Df-HIp"/>
@@ -228,6 +241,107 @@
             </objects>
             <point key="canvasLocation" x="647.82608695652175" y="138.61607142857142"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="xng-La-Vhx">
+            <objects>
+                <viewController id="hvF-bI-Dex" customClass="SettingsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vAc-4L-Jgm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="fsw-B8-LSj">
+                                <rect key="frame" x="32" y="32" width="350" height="471"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate minimum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-bd-WqY">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7XU-PO-8Kf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XAY-GX-wjY">
+                                        <rect key="frame" x="-2" y="63" width="354" height="31"/>
+                                        <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeSlideFor:" destination="hvF-bI-Dex" eventType="valueChanged" id="lvj-QL-hsE"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate maximum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r23-2L-CQg">
+                                        <rect key="frame" x="0.0" y="126" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ilc-N8-kVC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-u6-W30">
+                                        <rect key="frame" x="-2" y="189" width="354" height="31"/>
+                                        <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeSlideFor:" destination="hvF-bI-Dex" eventType="valueChanged" id="Hmu-oc-Euy"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch minimum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR6-2b-2Z0">
+                                        <rect key="frame" x="0.0" y="252" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aJ5-nR-3dA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-1000" minValue="-1000" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="PLW-Ia-vSU">
+                                        <rect key="frame" x="-2" y="315" width="354" height="31"/>
+                                        <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeSlideFor:" destination="hvF-bI-Dex" eventType="valueChanged" id="UAH-dS-FDl"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch maximum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opS-y0-mlR">
+                                        <rect key="frame" x="0.0" y="378" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fwn-Er-E5U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="500" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="69d-7p-uKB">
+                                        <rect key="frame" x="-2" y="441" width="354" height="31"/>
+                                        <color key="tintColor" red="0.262738428755253" green="0.72398870543542926" blue="0.73180650684931503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.065871634009999999" green="0.24451074580000001" blue="0.24753852740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeSlideFor:" destination="hvF-bI-Dex" eventType="valueChanged" id="lqT-tB-2sT"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27052119009999998" green="0.49777514029999997" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fsw-B8-LSj" firstAttribute="leading" secondItem="g41-29-xZY" secondAttribute="leading" constant="32" id="HDw-bo-9e8"/>
+                            <constraint firstItem="fsw-B8-LSj" firstAttribute="top" secondItem="g41-29-xZY" secondAttribute="top" constant="32" id="OO1-es-KG7"/>
+                            <constraint firstItem="g41-29-xZY" firstAttribute="trailing" secondItem="fsw-B8-LSj" secondAttribute="trailing" constant="32" id="XDv-5f-lJl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g41-29-xZY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sliderPitchMax" destination="69d-7p-uKB" id="aSt-mb-unb"/>
+                        <outlet property="sliderPitchMin" destination="PLW-Ia-vSU" id="C5M-hh-0cU"/>
+                        <outlet property="sliderRateMax" destination="uUh-u6-W30" id="c4d-MZ-oBe"/>
+                        <outlet property="sliderRateMin" destination="XAY-GX-wjY" id="HpE-Tk-v5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxP-V5-QNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3374" y="139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Echo" width="90" height="90"/>
@@ -238,5 +352,6 @@
         <image name="Reverb" width="90" height="90"/>
         <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
+        <image name="slider.horizontal.3" catalog="system" width="64" height="50"/>
     </resources>
 </document>
